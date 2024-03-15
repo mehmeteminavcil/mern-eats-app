@@ -20,7 +20,7 @@ app.get("/health", async (req: Request, res: Response) => {
 
 app.use("/api/my/user", myUserRoute);
 
-const PORT = 7000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log("server started on localhost", PORT);
