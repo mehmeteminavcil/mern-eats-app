@@ -1,4 +1,3 @@
-import Restaurant from "../../backend/src/models/restaurant";
 export type User = {
   _id: string;
   email: string;
