@@ -6,6 +6,7 @@ import "dotenv/config";
 //imported routes
 import myUserRoute from "./routes/MyUserRoute";
 import myRestaurantRoute from "./routes/MyRestaurantRoute";
+import restaurantRoute from "./routes/RestaurantRoute";
 
 // MONGODB CONNECTION
 mongoose
@@ -27,6 +28,7 @@ app.use(cors());
 // routes
 app.use("/api/my/restaurant", myRestaurantRoute);
 app.use("/api/my/user", myUserRoute);
+app.use("/api/restaurant", restaurantRoute);
 
 // health route
 app.get("/health", async (req: Request, res: Response) => {
